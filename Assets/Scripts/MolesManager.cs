@@ -33,22 +33,20 @@ public class MolesManager : MonoBehaviour
 	{
 		this.generate = true;
 
+
+		// mettre conditon de fin
 		while (true)
 		{
-			Debug.Log("laaa");
-			// wait to generate next group
 			yield return new WaitForSeconds(1.0f);
 
 			int n = moles.Count;
 			int maxNum = (int)this.maxMoles.Evaluate(Time.deltaTime);
-			Debug.Log("ciiii");
 			for (int i = 0; i < maxNum; i++)
 			{
 				this.moles[Random.Range(0, n)].Up();
 
 				yield return new WaitForSeconds(0.3f);
 			}
-			Debug.Log("ouuui");
 		}
 	}
 }

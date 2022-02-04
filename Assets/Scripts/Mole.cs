@@ -7,7 +7,7 @@ public class Mole : MonoBehaviour
 	public float moveSpeed = 1f;
 	public float waitTime = 1.0f;
 
-	private const float TOP = 1f;
+	private const float TOP = 0.2f;
 	private const float BOTTOM = -1f;
 	private float tmpTime = 0;
 
@@ -84,7 +84,6 @@ public class Mole : MonoBehaviour
 			{
 				transform.position =
 					new Vector3(transform.position.x, BOTTOM, transform.position.z);
-				Debug.Log("downnnn");
 				this.state = State.UNDER_GROUND;
 			}
 		}
